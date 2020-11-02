@@ -11,7 +11,7 @@ Wykonali:
     //Nawiązanie połączenia z BD
     $polaczenie = new mysqli($host, $user, $pass, $db);
 
-    if(!$polaczenie) {
+    if($polaczenie->connect_errno) {
         //Nieudana próba połączenia
         echo '<span style="color: red;">Nieudana próba połączenia!</span>';
     }
