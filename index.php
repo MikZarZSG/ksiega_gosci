@@ -1,3 +1,8 @@
+<!--
+Wykonali:
+- Mikołaj Żarnowski (PHP & MySQL)
+- Marcin Stanaszek (HTML & CSS)
+-->
 <!DOCTYPE html>
 <html lang="pl">
 <head>

@@ -1,4 +1,10 @@
 <?php
+/*
+Wykonali:
+- Mikołaj Żarnowski (PHP & MySQL)
+- Marcin Stanaszek (HTML & CSS)
+*/
+
     //Pobranie danych do połączenia z BD
     require_once 'dbconn.php';
 
