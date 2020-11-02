@@ -33,7 +33,7 @@
     }
 
     .boxKomentarze {
-        height: 100px;
+        min-height: 100px;
         width: 400px;
         background-color: #FFFFF0;
         border: 2px solid #FFEBCD;
@@ -61,10 +61,32 @@
     Wpisy:
     <br><br>
 
-    <div class="boxKomentarze"></div>
-    <!--
-zapisz w php 
--->
+<?php
+    //Pobranie danych do połączenia z BD
+    require_once 'dbconn.php';
+
+    //Nawiązanie połączenia z BD
+    $polaczenie = new mysqli($host, $user, $pass, $db);
+
+    if(!$polaczenie) {
+        //Nieudana próba połączenia
+        echo '<span style="color: red;">Nieudana próba połączenia!</span>';
+    } else {
+        //Zapytanie pobierające
+        $sql = "
+        SELECT * 
+        FROM Komentarze 
+        ORDER BY data DESC, id_komentarz DESC";
+        
+        //Wykonanie zapytania
+        $wynik = $polaczenie->query($sql);
+        
+        var_dump($wynik);
+        
+        //Zamknięcie połączenia z BD
+        $polaczenie->close();
+    }
+?>
 
 </body>
 
