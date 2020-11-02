@@ -33,7 +33,6 @@
     }
 
     .boxKomentarze {
-        min-height: 100px;
         width: 400px;
         background-color: #FFFFF0;
         border: 2px solid #FFEBCD;
@@ -81,7 +80,15 @@
         //Wykonanie zapytania
         $wynik = $polaczenie->query($sql);
         
-        var_dump($wynik);
+        //Wypisanie danych
+        while($wiersz = $wynik->fetch_assoc()) {
+echo<<<END
+    <div class="boxKomentarze">
+        <p>${wiersz['podpis']} | ${wiersz['data']}</p>
+        <p>${wiersz['tresc']}</p>
+    </div>
+END;
+        }
         
         //Zamknięcie połączenia z BD
         $polaczenie->close();
