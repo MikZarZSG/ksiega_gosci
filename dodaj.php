@@ -28,6 +28,7 @@
         //Zamknięcie połączenia z BD
         $polaczenie->close();
         
+        //Powrót do nagłówka strony
         header('Location: index.php');
     }
 ?>
