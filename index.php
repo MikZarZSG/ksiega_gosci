@@ -32,7 +32,7 @@
         $sql = "
         SELECT * 
         FROM Komentarze 
-        ORDER BY data DESC, id_komentarz";
+        ORDER BY data DESC, id_komentarz DESC";
         
         //Wykonanie zapytania
         

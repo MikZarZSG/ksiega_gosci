@@ -13,7 +13,7 @@
         //Pobranie danych z formularza
         $podpis = $_POST['podpis'];
         $data = date("Y-m-d");
-        $tresc = $_POST['tresc'];
+        $tresc = $_POST['kom'];
         
         //Zapytanie wstawiające
         $sql = "
@@ -29,6 +29,6 @@
         $polaczenie->close();
         
         //Powrót do nagłówka strony
-        header('Location: index.php');
+        header('Location: KsiegaGosci.php');
     }
 ?>
