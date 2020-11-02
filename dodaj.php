@@ -1,23 +1,33 @@
 <?php
+    //Pobranie danych do połączenia z BD
     require_once 'dbconn.php';
 
+    //Nawiązanie połączenia z BD
     $polaczenie = new mysqli($host, $user, $pass, $db);
 
     if(!$polaczenie) {
-        echo '<span style="color: red;">Nieudana próba połączenia</span>';
+        //Nieudana próba połączenia
+        echo '<span style="color: red;">Nieudana próba połączenia!</span>';
     }
     else {
+        //Pobranie danych z formularza
         $podpis = $_POST['podpis'];
         $data = date("Y-m-d");
         $tresc = $_POST['tresc'];
         
-        echo $podpis;
-        echo "<br>";
+        //Zapytanie wstawiające
+        $sql = "
+        INSERT INTO Komentarze
+        VALUES(NULL, '$podpis', '$data', '$tresc')";
         
-        echo $data;
-        echo "<br>";
+        //Wykonanie zapytania
+        if(!$polaczenie->query($sql)) {
+            echo '<span style="color: red;">Nieudana próba wstawienia danych do tabeli!</span>';
+        }
         
-        echo $tresc;
-        echo "<br>";
+        //Zamknięcie połączenia z BD
+        $polaczenie->close();
+        
+        header('Location: index.php');
     }
 ?>
