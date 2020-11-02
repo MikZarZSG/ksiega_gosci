@@ -14,6 +14,7 @@ Wykonali:
     if($polaczenie->connect_errno) {
         //Nieudana próba połączenia
         echo '<span style="color: red;">Nieudana próba połączenia!</span>';
+        header('Location: KsiegaGosci.php');
     }
     else {
         //Pobranie danych z formularza
