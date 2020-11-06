@@ -87,9 +87,11 @@ Wykonali:
         
         //Wypisanie danych
         while($wiersz = $wynik->fetch_assoc()) {
+            $data = strtotime($wiersz['data']);
+            $dataPL = date("d.m.Y", $data);
 echo<<<END
     <div class="boxKomentarze">
-        <p>${wiersz['podpis']} | ${wiersz['data']}</p>
+        <p>${wiersz['podpis']} | $dataPL</p>
         <p>${wiersz['tresc']}</p>
     </div>
 END;
