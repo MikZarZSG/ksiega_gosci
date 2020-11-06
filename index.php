@@ -4,47 +4,14 @@ Wykonali:
 - Marcin Stanaszek (HTML & CSS)
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <title>Księga gości</title>
-</head>
-
-<style>
-    body {
-        background-color: #FFF8DC;
-    }
-
-    textarea {
-        resize: none;
-        background-color: #FFFFF0;
-        border: 2px solid #FFEBCD;
-    }
-
-
-    .przycisk {
-        height: 40px;
-        background-color: #FFFFF0;
-        color: black;
-        border: 5px solid #FFEBCD;
-        border-style: outset;
-    }
-
-    .przycisk:hover {
-        background-color: #FDF5E6;
-        border: 5px solid #FAEBD7;
-        border-style: outset;
-    }
-
-    .boxKomentarze {
-        width: 400px;
-        background-color: #FFFFF0;
-        border: 2px solid #FFEBCD;
-    }
     
-
-</style>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
