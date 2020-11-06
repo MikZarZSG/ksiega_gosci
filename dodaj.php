@@ -36,6 +36,6 @@ Wykonali:
         $polaczenie->close();
         
         //Powrót do nagłówka strony
-        header('Location: KsiegaGosci.php');
+        header('Location: index.php');
     }
 ?>
